@@ -1,0 +1,8 @@
+
+
+.navbar-default, .navbar-nav > li > a, .dropdown-menu {
+    color: white !important;
+    text-transform: uppercase;
+}
+
+

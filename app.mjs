@@ -24,12 +24,12 @@ app.use(express.static("./public"))
 app.get('/', (req, res) => {
 
   // Render the website's homepage
-  res.render('home.ejs')
+  res.render('index.ejs')
 
 });
 
 // Connect routers
-app.use('/account', ROUTES_history)
+app.use('/account', ROUTES_account)
 
 // Start Server
 // The '0.0.0.0' opens IP connections wider to not just localhosts
