@@ -3,6 +3,6 @@
 *.db
 .env
 node_modules
-sqlTemplates
+package-lock.json
 
 

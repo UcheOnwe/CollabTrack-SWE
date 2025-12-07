@@ -1,6 +1,6 @@
 
 import express from 'express';
-import { getUserInfoWithEmail } from '../resources/sqlTools.mjs';
+//import { getUserInfoWithEmail } from '../resources/sqlTools.mjs';
 
 const router = express.Router();
 
@@ -14,7 +14,7 @@ router.post("/", (req, res) => {
   console.log(req.body)
 
   // Get user ID with email ID
-  const userInfo = getUserInfoWithEmail(req.body.userEmail);
+//  const userInfo = getUserInfoWithEmail(req.body.userEmail);
 
   console.log(userInfo);
 

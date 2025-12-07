@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="/styles/index.css">
   </head>
 
   <body style="min-height: 100dvh;">
-
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg text-white bg-success">
+    <nav class="row navbar navbar-expand-lg text-white bg-success">
       <div class="container-fluid">
         <a class="navbar-brand">CollabTrack</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,8 +39,77 @@
       </div>
     </nav>
 
+    <div id="upcomingTasksCardList" class="card" style="width: 80rem;">
+      <div class="card-body position-start p-0 mt-1">
+        <h3 class="card-title">Upcoming Tasks</h3>
+        <button type="button" class="btn btn-success w3-display-topright">New Task</button>
+
+        <div id="upcomingTasksContent" class="d-flex flex-row flex-nowrap overflow-x-scroll mx-5" style="max-width: 900px;">
+          <div id="upcomingTask" class="border d-none" style="width: 500px; margin-left: 10px;">
+            <div class="card-body" style="">
+              <h3 class="card-title text-center">Task 1</h5>
+              <form class="mt-3">
+                <div class="mb-3">
+                  <strong>Urgency: </strong>
+                  <label>High</label>
+                </div>
+
+                <div class="mb-3">
+                  <strong>Importance: </strong>
+                  <label>Low</label>
+                </div>
+
+                <div class="mb-3">
+                  <strong>Due Date: </strong>
+                  <label>2025-10-20</label>
+                </div>
+
+                <input class="btn btn-success" type="button" value="View Full Task">
+                <input class="btn btn-success" type="button" value="Edit Task">
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="userGroupsList" class="card" style="width: 80rem;">
+      <div class="card-body position-start p-0 mt-1">
+        <h3 class="card-title">Groups</h3>
+        <button type="button" class="btn btn-success w3-display-topright">Create Group</button>
+        <div id="userGrupsContent" class="d-flex flex-column flex-nowrap overflow-x-scroll mx-5" style="max-width: 900px;">
+          <div id="userGroupCard" class="border d-none" style="width: 500px; margin-left: 10px;">
+            <div class="card-body" style="">
+              <h3 class="card-title text-center">Group 1</h5>
+              <form class="mt-3">
+                <div class="mb-3">
+                  <strong>Urgency: </strong>
+                  <label>High</label>
+                </div>
+
+                <div class="mb-3">
+                  <strong>Importance: </strong>
+                  <label>Low</label>
+                </div>
+
+                <div class="mb-3">
+                  <strong>Due Date: </strong>
+                  <label>2025-10-20</label>
+                </div>
+
+                <input class="btn btn-success" type="button" value="View Full Task">
+                <input class="btn btn-success" type="button" value="Edit Task">
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <!-- Login Page-->
-    <div class="card" style="width: 18rem; margin: 30px;">
+    <!--<div class="card" style="width: 18rem; margin: 30px;">
       <div class="card-body">
         <h4 class="card-title text-center">Login</h5>
         <form>
@@ -58,9 +127,10 @@
         </form>
       </div>
     </div>
+    -->
 
     <!-- Create Account Page-->
-    <div class="card" style="width: 18rem; margin: 30px;">
+    <!--<div class="card" style="width: 18rem; margin: 30px;">
       <div class="card-body">
         <h4 class="card-title text-center">Create an Account</h5>
         <form>
@@ -83,9 +153,10 @@
         </form>
       </div>
     </div>
+    -->
 
     <!-- Task Creation Page-->
-    <div class="card" style="width: 18rem; margin: 30px;">
+    <!--<div class="card" style="width: 18rem; margin: 30px;">
       <div class="card-body">
         <h4 class="card-title">New Task</h5>
         <form class="row g-3 mt-1" action="http://localhost:6767/tasks" method="post" role="form">
@@ -127,9 +198,10 @@
         </form>
       </div>
     </div>
+    -->
 
     <!-- Small Task Info Card -->
-    <div class="card" style="width: 25rem; margin: 30px;">
+    <!--<div class="card" style="width: 25rem; margin: 30px;">
       <div class="card-body">
         <h3 class="card-title text-center">Task 1</h5>
         <form class="mt-3">
@@ -154,9 +226,10 @@
         </form>
       </div>
     </div>
+    -->
 
     <!-- Task Edit Card-->
-    <div class="card" style="width: 18rem; margin: 30px;">
+    <!--<div class="card" style="width: 18rem; margin: 30px;">
       <div class="card-body">
         <h4 class="card-title">Edit Task</h5>
         <form class="row g-3 mt-1" action="http://localhost:6767/tasks" method="post" role="form" data-taskId=1>
@@ -198,9 +271,10 @@
         </form>
       </div>
     </div>
+    -->
 
     <!-- Group Info Page-->
-    <div class="card" style="width: 25rem; margin: 30px;">
+    <!--<div class="card" style="width: 15rem; margin: 30px;">
       <div class="card-body">
         <h3 class="card-title text-center">Group 1</h5>
         <form class="mt-3">
@@ -222,9 +296,10 @@
         </form>
       </div>
     </div>
-
+    -->
+ 
     <!-- User Account Info Page-->
-    <div class="card" style="width: 30rem; margin: 30px;">
+    <div class="card" style="width: 30rem;">
       <div class="card-body container text-center">
         <h3 class="card-title">User 1</h5>
         <form class="row text-center mt-2">
@@ -251,7 +326,7 @@
     </div>
 
     <!-- Account Settings Page -->
-    <div class="card" style="width: 30rem; margin: 30px;">
+    <!--<div class="card" style="width: 30rem; margin: 30px;">
       <div class="card-body container">
         <h4 class="card-title text-center mb-3">Account Settings</h4>
         <div class="form-check form-switch">
@@ -288,8 +363,11 @@
         </div>
       </div>
     </div>
+    -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/scripts/dashboard.js">
+    </script>
   </body>
 </html>
 

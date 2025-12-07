@@ -9,6 +9,7 @@ import ROUTES_account from './routes/account.mjs'
 import ROUTES_login from './routes/login.mjs'
 import ROUTES_dashboard from './routes/dashboard.mjs'
 import ROUTES_tasks from './routes/tasks.mjs'
+import ROUTES_api from './routes/api.mjs'
 
 import bodyParser from 'body-parser';
 
@@ -32,7 +33,7 @@ app.use(express.static("./public"))
 app.get('/', (req, res) => {
 
   // Render the website's homepage
-  res.render('index.ejs')
+  res.status(200).send("ello, home page ere")
 
 });
 
@@ -41,6 +42,7 @@ app.use('/account', ROUTES_account)
 app.use('/login', ROUTES_login)
 app.use('/dashboard', ROUTES_dashboard)
 app.use('/tasks', ROUTES_tasks)
+app.use('/api', ROUTES_api)
 
 // Start Server
 // The '0.0.0.0' opens IP connections wider to not just localhosts once port has been forwarded

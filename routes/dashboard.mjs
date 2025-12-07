@@ -1,21 +1,23 @@
 
+import {render} from 'ejs';
 import express from 'express';
 
 const router = express.Router();
 
 // '/dashboard' Routes
-//router.get("/", (req, res) => {
+router.get("/", (req, res) => {
+  console.log("Reqeust /dashabord recieved:");
 
-//  res.status(200).send("Hello");
+  res.status(200).render('login.ejs');
 
-//});
+});
 
 // Dynamic Routes
-router.get("/dashboard/:userEmail", (req, res) => {
-  console.log("Reqeust /dashabord recieved:");
-  console.log(req.params);
+router.get("/:userID", (req, res) => {
+  console.log("Reqeust /dashabord/:userID recieved:");
+  //console.log(req.params);
 
-  res.status(200).send("e");
+  res.status(200).render('index.ejs');
 });
 
 export default router;

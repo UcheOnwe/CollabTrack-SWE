@@ -16,20 +16,32 @@ function connectDB(err) {
   console.log("DB has connected.")
 }
 
-
-async function getUserInfoWithEmail(ID) {
- let resp = DB.run(userInfoWithEmailQuery(ID), [], (err) => {
+async function getTasksWithID(ID, callback) {
+ DB.all(userTasksWithIDQuery(ID), [], (err, rows) => {
    if (err) {
-     console.log("Error running 'getUserInfoWithEmail' SQL Query");
-     return null;
+     console.log("Error running 'getTasksWithID' SQL Query:");
+     console.log(err)
+     callback(null)
    }
 
-   console.log(resp);
-
-   //return resp;
-   return null;
+   // Cant return row data directly since query is async so we use callbacks
+   callback(rows);
  });
 }
+
+async function getGroupsWithID(ID, callback) {
+ DB.all(userGroupsWithIDQuery(ID), [], (err, rows) => {
+   if (err) {
+     console.log("Error running 'getGroupsWithID' SQL Query:");
+     console.log(err)
+     callback(null)
+   }
+
+   // Cant return row data directly since query is async so we use callbacks
+   callback(rows);
+ });
+}
+
 
 async function createTask(FormInfo) {
   console.log("Creating Task....")
@@ -65,12 +77,20 @@ async function updateTask(FormInfo) {
   });
 }
 
-export { DB, getUserInfoWithEmail, createTask, updateTask };
+export { DB, getTasksWithID, createTask, updateTask };
 
 
 
 function userInfoWithEmailQuery(user_id) { 
   return `SELECT user_id FROM Users WHERE email=${user_id}`;
+};
+
+function userTasksWithIDQuery(user_id) { 
+  return `SELECT * FROM User_Tasks WHERE owner_id=${user_id}`;
+};
+
+function userGroupsWithIDQuery(user_id) { 
+  return `SELECT * FROM Group_Members WHERE user_id=${user_id}`;
 };
 
 function createTaskQuery(TaskInfo, user_id) {
