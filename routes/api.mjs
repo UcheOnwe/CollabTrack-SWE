@@ -1,6 +1,6 @@
 
 import express from 'express';
-import { createTask, updateTask, getTasksWithID } from '../resources/sqlTools.mjs';
+import { createTask, updateTask, getTasksWithID, getGroupsWithID, getUserInfoWithID} from '../resources/sqlTools.mjs';
 
 const router = express.Router();
 
@@ -37,6 +37,22 @@ router.get("/groups/:id", (req, res) => {
   getGroupsWithID(req.params.id, queryCallback);
 });
 
+router.get("/users/:id", (req, res) => {
+  console.log("GET request made to /api/users");
+  //console.log(req.params)
+
+  function queryCallback(row) {
+    if (row.length > 0) {
+      res.status(200).send(JSON.stringify({foundData: 1, Data: row}));
+    }
+    else {
+      res.status(404).send(JSON.stringify({foundData: 0, Data: "Info could not be found"}));
+    }
+  }
+
+  getUserInfoWithID(req.params.id, queryCallback);
+});
+
 
 router.post("/tasks", (req, res) => {
   console.log("POST request made to /tasks:")
@@ -47,6 +63,15 @@ router.post("/tasks", (req, res) => {
   if (!createTask(req.body)) {
     res.status(500).send("Task could not be created")
   }
+
+  // If _method is 'create' use createTask query
+  switch (req.params._method) {
+    case "create":
+      break;
+    case "update":
+      break;
+  }
+  // else if _method is 'update' use updateTask query
 
   res.status(200).send("Task Created Succesfully")
 });

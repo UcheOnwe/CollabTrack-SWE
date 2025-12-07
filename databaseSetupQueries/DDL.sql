@@ -6,6 +6,7 @@ CREATE TABLE Users (
   legal_first VARCHAR(15) NOT NULL,
   legal_last VARCHAR(15),
   phone_number VARCHAR(10) NOT NULL,
+  about_me VARCHAR(200),
   email VARCHAR(30) NOT NULL,
   age INTEGER
 );

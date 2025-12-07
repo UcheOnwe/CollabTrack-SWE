@@ -41,4 +41,3 @@ Simple steps for set up:
    - Currently only 10 users so use 0-10 for user_id 
    - Used to use examples of differnt user dashboards based on their data stored in the database
 
-

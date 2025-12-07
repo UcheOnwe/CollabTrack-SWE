@@ -1,15 +1,15 @@
 
-INSERT INTO Users (username, passcode, legal_first, legal_last, phone_number, email, age) VALUES
-('User1', 'Userpass', 'John', 'Grayson', 1234567891, 'example1@gmail.com', 20),
-('User2', 'Userpass', 'Ash', 'Lopez', 1234567891, 'example2@gmail.com', 21),
-('User3', 'Userpass', 'Cody', 'Banks', 1234567891, 'example3@gmail.com', 19),
-('User4', 'Userpass', 'Angel', 'Rivera', 1234567891, 'example4@gmail.com', 34),
-('User5', 'Userpass', 'Jayson', 'Greeves', 1234567891, 'example5@gmail.com', 42),
-('User6', 'Userpass', 'Steve', 'Rivera', 1234567891, 'example6@gmail.com', 43),
-('User7', 'Userpass', 'Trevor', 'Vasquez', 1234567891, 'example7@gmail.com', 62),
-('User8', 'Userpass', 'Larry', 'Middleton', 1234567891, 'example8@gmail.com', 23),
-('User9', 'Userpass', 'Cody', 'Brandon', 1234567891, 'example9@gmail.com', 28),
-('User10', 'Userpass', 'Mary', 'Stevens', 1234567891, 'example10@gmail.com', 18);
+INSERT INTO Users (username, passcode, legal_first, legal_last, phone_number, about_me, email, age) VALUES
+('User1', 'Userpass', 'John', 'Grayson', 1234567891, 'Just your everyday average joe.', 'example1@gmail.com', 20),
+('User2', 'Userpass', 'Ash', 'Lopez', 1234567891, 'I collect bottcaps. Im looking for rare ones!', 'example2@gmail.com', 21),
+('User3', 'Userpass', 'Cody', 'Banks', 1234567891, 'I love solving hard puzzles....', 'example3@gmail.com', 19),
+('User4', 'Userpass', 'Angel', 'Rivera', 1234567891, 'Im a professional boxer.', 'example4@gmail.com', 34),
+('User5', 'Userpass', 'Jayson', 'Greeves', 1234567891, 'Uni Student studying BioChem!', 'example5@gmail.com', 42),
+('User6', 'Userpass', 'Steve', 'Rivera', 1234567891, 'Interested in fantasy football.', 'example6@gmail.com', 43),
+('User7', 'Userpass', 'Trevor', 'Vasquez', 1234567891, 'I collect Pokemon Cards.', 'example7@gmail.com', 62),
+('User8', 'Userpass', 'Larry', 'Middleton', 1234567891, 'I love hiking!', 'example8@gmail.com', 23),
+('User9', 'Userpass', 'Cody', 'Brandon', 1234567891, 'Ive been interested in reading lately...', 'example9@gmail.com', 28),
+('User10', 'Userpass', 'Mary', 'Stevens', 1234567891, 'I like trains!', 'example10@gmail.com', 18);
 
 INSERT INTO User_Tasks (owner_id, task_name, description, importance, urgency, due_date) VALUES
 (1, 'Do laundry', 'Laundry.', 2, 2, '2025-12-25'),
