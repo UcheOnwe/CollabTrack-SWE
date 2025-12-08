@@ -37,14 +37,14 @@ Simple steps for set up:
 
 
 // Current Endpoints
- - https://localhost:6767/dashboard/{user_id} 
+ - http://localhost:6767/dashboard/{user_id} 
    - Currently only 10 users so use 0-10 for user_id 
    - Used to use examples of differnt user dashboards based on their data stored in the database
 
- - https://localhost:6767/dashboard
+ - http://localhost:6767/dashboard
    - Redirects to login page 
 
- - https://localhost:6767/login
+ - http://localhost:6767/login
    - Login page
    - Use any Username and password combination stored in the database and it will redirect to the dashabrod for that user
 
